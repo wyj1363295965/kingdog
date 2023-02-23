@@ -1,8 +1,6 @@
 package com.wyj.kingdog.controller;
 
 import com.wyj.kingdog.config.udp.UdpIntegrationClient;
-import com.wyj.kingdog.entity.User;
-import com.wyj.kingdog.feign.UserFeignClient;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +15,7 @@ public class HelloController {
 
     @Autowired
     private UdpIntegrationClient udpIntegrationClient;
-    @Autowired
-    private UserFeignClient userFeignClient;
+
 
     @RequestMapping(name = "hello", method = RequestMethod.GET)
     public String hello() {
@@ -33,9 +30,5 @@ public class HelloController {
         udpIntegrationClient.sendMessage(param);
     }
 
-    @RequestMapping(value = "/getUser", method = RequestMethod.POST)
-    public User getUser() {
 
-        return userFeignClient.findById(1L);
-    }
 }
