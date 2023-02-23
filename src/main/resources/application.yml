@@ -11,11 +11,9 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://192.168.2.161:8761/eureka/
   instance:
-    prefer-ip-address: false
-userservice:
-  url: http://user-service/
+    prefer-ip-address: true
 
 udp:
   port: 18080
