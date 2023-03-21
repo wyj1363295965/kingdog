@@ -2,8 +2,6 @@ package com.wyj.kingdog.config.tcp;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
-import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
-import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 
 public class BootNettyChannelInitializer<SocketChannel> extends ChannelInitializer<Channel> {

@@ -10,7 +10,7 @@ public class MyRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         /**
-         * 使用异步注解方式启动netty服务端服务
+         * 使用容器管理时，使用异步注解方式启动netty服务端服务
          */
         new BootNettyServer().bind(8888);
     }

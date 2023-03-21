@@ -20,9 +20,9 @@ public class HelloController {
     @Autowired
     private UserFeignClient userFeignClient;
 
-    @RequestMapping(name = "hello", method = RequestMethod.GET)
-    public String hello() {
-        return "hello word";
+    @RequestMapping(value = "hello1", method = RequestMethod.POST)
+    public String hello1() {
+        return "hello word1";
     }
 
     @RequestMapping(value = "/sendUdp", method = RequestMethod.POST)
@@ -33,9 +33,8 @@ public class HelloController {
         udpIntegrationClient.sendMessage(param);
     }
 
-    @RequestMapping(value = "/getUser", method = RequestMethod.POST)
-    public User getUser() {
-
+    @RequestMapping(value = "/findById", method = RequestMethod.POST)
+    public User findById() {
         return userFeignClient.findById(1L);
     }
 }

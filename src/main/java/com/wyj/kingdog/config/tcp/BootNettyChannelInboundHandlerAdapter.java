@@ -1,13 +1,12 @@
 package com.wyj.kingdog.config.tcp;
 
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 
 @Slf4j
 public class BootNettyChannelInboundHandlerAdapter extends ChannelInboundHandlerAdapter {
