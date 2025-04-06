@@ -1,9 +1,21 @@
 server:
-  port: 8080
+  port: 8083
 spring:
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
 
+  application:
+    name: king-dog
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+#  cloud:
+#    nacos:
+#      discovery:
+#        # 服务注册地址
+#        server-addr: 127.0.0.1:8848
 udp:
   port: 18080

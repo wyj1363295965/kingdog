@@ -17,7 +17,7 @@ public class HelloController {
     private UdpIntegrationClient udpIntegrationClient;
 
 
-    @RequestMapping(name = "hello", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello() {
         return "hello word";
     }
