@@ -1,6 +1,9 @@
 server:
   port: 8083
+  shutdown: graceful
 spring:
+  main:
+    register-shutdown-hook: true #默认true,设置false优雅停机也会失效
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER

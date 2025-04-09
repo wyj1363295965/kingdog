@@ -22,7 +22,11 @@ public class CursorApiController {
 
     @RequestMapping(value = "/auth/test", method = RequestMethod.GET)
     public String test() {
-
+        try {
+            Thread.sleep(10*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "success";
     }
 

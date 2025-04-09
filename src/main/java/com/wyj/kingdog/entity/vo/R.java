@@ -3,13 +3,11 @@ package com.wyj.kingdog.entity.vo;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-import java.util.List;
-
 @Data
 @Accessors(chain = true)
 public class R<T> {
 
-    private List<T> data;
+    private T data;
 
     private Long total;
 
