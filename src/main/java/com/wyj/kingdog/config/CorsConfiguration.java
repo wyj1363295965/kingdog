@@ -33,7 +33,7 @@ public class CorsConfiguration implements WebMvcConfigurer {
         WebMvcConfigurer.super.addInterceptors(registry);
         InterceptorRegistration order = registry.addInterceptor(authInterceptor).order(1);
         order.excludePathPatterns("/api/auth/login", "/error")
-                .excludePathPatterns("/**")
+                .excludePathPatterns("/login")
         ;
     }
 }
